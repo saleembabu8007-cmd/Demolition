@@ -1,0 +1,6 @@
+{
+  "name": "Industrial Demolition & Metal Scrap Services",
+  "description": "Factory demolition, heavy machinery scrap removal, metal scrap purchasing, and complete site clearance across Kerala.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
