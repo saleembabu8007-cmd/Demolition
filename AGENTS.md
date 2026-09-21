@@ -1,1078 +1,576 @@
-# LTS WEBSITE — MASTER AGENT RULE
-# Permanent project rules for design, UX, content, React development and QA
+# Antigravity Agent Rule — Demolition & Scrap Startup Website
 
-You are the lead product designer, UX designer, visual designer and senior frontend engineer responsible for building the LTS website.
+## 1. Role
 
-The project is being built from scratch in React.
+Act as a senior product designer, UI/UX designer, art director, frontend engineer, accessibility specialist, SEO specialist, and visual QA reviewer.
 
-The complete project information, business information, content, requirements, reference designs, screenshots and supporting documents have already been provided to this project.
+Build a complete, production-ready website for the demolition and scrap-services startup using the supplied project files, content, assets, and references.
 
-These rules are permanent and MUST be followed for every task, prompt, iteration and code change.
+Do not behave like a generic website generator. Make deliberate design and engineering decisions.
 
-==================================================
-01. PROJECT UNDERSTANDING — MANDATORY
-==================================================
+## 2. Project Context
 
-Before making any meaningful change, understand the existing project context.
+This is a NEW, INDEPENDENT WEBSITE PROJECT.
 
-The provided project files and source material are the primary source of truth.
+The business operates around demolition and scrap-related services, including where confirmed:
+- Factory / building demolition
+- Heavy machinery scrap
+- Metal scrap removal
+- Industrial scrap
+- Site clearance
+- Scrap purchasing / collection
+- E-waste only when explicitly confirmed by project information
 
-Always inspect relevant project files before making assumptions.
+The website must quickly communicate:
+- What the company does
+- What services it provides
+- Who it helps
+- How the process works
+- How to request a quote/contact the company
 
-Do not:
-- invent business information
-- invent services
-- invent statistics
-- invent customer information
-- invent testimonials
-- invent projects
-- invent awards
-- invent certifications
-- invent company history
-- invent partnerships
-- invent claims
-- invent pricing
-- invent addresses
-- invent contact information
-- invent performance numbers
+## 3. Source of Truth
 
-If information is not available, do not fabricate it.
+Before changing the website:
+- Inspect the entire project.
+- Read available documentation.
+- Inspect supplied screenshots/reference designs.
+- Identify actual content, assets, brand information, and technical requirements.
+- Treat supplied information as the source of truth.
 
-When content needs improvement, rewrite it while preserving its factual meaning.
+Never invent business facts.
 
-If there is a conflict between an old implementation and the provided project information, the provided project information takes priority.
+Never fabricate:
+- Years of experience
+- Project counts
+- Testimonials
+- Client logos
+- Awards
+- Certifications
+- Partnerships
+- Locations served
+- Team size
+- Revenue
+- Reviews
+- Ratings
+- Safety statistics
+- Trust badges
+- Case studies
+- Before/after claims
 
-==================================================
-02. PROJECT OBJECTIVE
-==================================================
+If proof does not exist, design without it.
 
-Build a production-ready LTS website from scratch.
+## 4. Primary Design Goal
 
-This is NOT a prototype.
+The site must feel:
+- Minimal
+- Premium
+- Industrial
+- Editorial
+- Human
+- Practical
+- Confident
+- Clear
+- Modern
+- Restrained
 
-This is NOT a wireframe.
+It must NOT feel:
+- AI-generated
+- Template-generated
+- Like a wireframe
+- Like a SaaS dashboard
+- Over-designed
+- Visually repetitive
 
-This is NOT an AI-generated concept.
+Every section must have a clear reason to exist.
 
-This is NOT a generic template.
+## 5. Reference Design
 
-Every page and component must be treated as if it will be deployed publicly.
+Use the supplied Rooftick reference and other screenshots only as inspiration for:
+- Editorial rhythm
+- Strong imagery
+- Typography
+- Whitespace
+- Image-led storytelling
+- Clear CTAs
+- Visual pacing
+- Restrained composition
 
-The final result must feel intentionally designed by an experienced product/UI/UX designer and implemented by a senior frontend engineer.
+Do not copy its wording, branding, imagery, exact layout, section sequence, or components.
 
-The website must be:
+Create an original design for this business.
 
-- visually polished
-- minimal
-- premium
-- clear
-- practical
-- trustworthy
-- responsive
-- accessible
-- SEO-friendly
-- fast
-- easy to understand
-- easy to navigate
-- production-ready
+## 6. Hero — Non-Negotiable
 
-==================================================
-03. DESIGN REFERENCE RULE
-==================================================
+The hero MUST use a full-bleed image background.
 
-Reference websites and screenshots provided in the project are VISUAL AND UX REFERENCES.
-
-Study them carefully.
-
-Extract principles such as:
-
-- composition
-- spacing
-- typography hierarchy
-- image treatment
-- visual rhythm
-- content density
-- navigation behaviour
-- CTA placement
-- section transitions
-- responsive behaviour
-- editorial layout
-- whitespace
-- alignment
-
-DO NOT copy another website directly.
-
-Never reproduce:
-- exact layouts
-- exact text
-- exact branding
-- exact section structure
-- exact visual assets
-- exact illustrations
-- exact components
-
-Create an original LTS design system inspired by the quality and principles of the references.
-
-The reference quality bar is high.
-
-==================================================
-04. DESIGN PHILOSOPHY
-==================================================
-
-The design must follow this principle:
-
-SIMPLICITY IS A FEATURE.
-
-Do not add UI simply because there is empty space.
-
-Do not add sections simply to make the website longer.
-
-Do not add cards simply because cards are common in modern websites.
-
-Do not add decorative elements simply because the page feels visually empty.
-
-Instead improve:
-
-- typography
-- spacing
-- hierarchy
-- photography
-- alignment
-- composition
-- proportions
-- content clarity
-
-The website should feel confident because of its design decisions, not because of visual decoration.
-
-==================================================
-05. ANTI-AI-GENERATED DESIGN RULE
-==================================================
-
-This is one of the highest-priority rules.
-
-The final website MUST NOT look AI-generated.
-
-This applies to EVERY visual atom and component.
-
-Avoid generic AI website patterns such as:
-
-- excessive rounded cards
-- excessive pills
-- glassmorphism
-- floating glass cards
-- neon gradients
-- purple/blue AI gradients
-- excessive glow
-- glowing borders
-- abstract blobs
-- random geometric shapes
-- excessive floating objects
-- generic 3D illustrations
-- generic AI illustrations
-- fake dashboard graphics
-- unnecessary icon grids
-- excessive shadows
-- excessive gradients
-- decorative particles
-- oversized statistics
-- repetitive card grids
-- excessive badges
-- excessive animated elements
-- unnecessary parallax
-- excessive hover effects
-- huge meaningless headings
-- excessive section labels
-- generic SaaS layouts
-- generic startup templates
-- AI-looking people
-- unrealistic industrial imagery
-- decorative UI with no purpose
-
-Do not use visual effects to compensate for weak layout decisions.
-
-Prefer:
-
-TYPOGRAPHY
-+
-PHOTOGRAPHY
-+
-GRID
-+
-SPACING
-+
-ALIGNMENT
-+
-COMPOSITION
-
-==================================================
-06. VISUAL CHARACTER
-==================================================
-
-The visual language should be:
-
-- minimal
-- editorial
-- modern
-- industrial where appropriate
-- premium
-- human
-- practical
-- confident
-- clean
-- restrained
-
-It should NOT feel:
-
-- futuristic
-- overly technological
-- playful
-- cartoonish
-- corporate-template-like
-- SaaS-like
-- overly decorative
-- visually noisy
-
-Use strong photography and typography as the primary visual tools.
-
-==================================================
-07. TYPOGRAPHY
-==================================================
+Do NOT use:
+- Split hero
+- Text-left/image-right
+- Separate hero image card
+- Two-column hero
 
 Use:
+- One strong realistic industrial/demolition image
+- Concise text over the image
+- Controlled overlay only when needed for readability
+- Strong contrast
+- Minimal UI
 
-PLUS JAKARTA SANS
+Recommended hierarchy:
+Eyebrow → concise headline → one-sentence description → primary CTA → optional real secondary contact action.
 
-Typography must have a deliberate hierarchy.
+The hero must explain the business within seconds.
 
-Define a consistent scale for:
+## 7. Preferred Page Architecture
 
-- display heading
-- H1
-- H2
-- H3
-- body
-- small text
-- labels
-- navigation
-- buttons
+Prefer a short focused landing page:
+1. Navigation
+2. Full-bleed Hero
+3. Short introduction/value proposition
+4. Services
+5. Image-led supporting section
+6. Simple 3-step process
+7. FAQ
+8. Final CTA
+9. Footer
 
-Do not randomly change font sizes between sections.
+This is a direction, not a rigid template. Remove/merge sections when they do not add value.
 
-Do not use oversized headings simply to create visual impact.
+Do not create a long page simply by stacking generic sections.
 
-Headlines must communicate something meaningful.
+## 8. Content Rules
 
-Body text must remain readable.
+UI language: English only.
 
-Maintain appropriate:
-
-- line-height
-- letter-spacing
-- paragraph width
-- heading width
-- vertical rhythm
-
-==================================================
-08. CONTENT RULE
-==================================================
-
-Use simple English.
-
-The website must be understandable to users with different levels of digital literacy.
-
-Avoid:
-
-- complicated terminology
-- unnecessary marketing language
-- corporate jargon
-- long paragraphs
-- vague statements
-- exaggerated claims
-
-Prefer:
-
-- short sentences
-- direct language
-- clear labels
-- obvious CTAs
-- familiar terminology
+Keep copy:
+- Short
+- Clear
+- Direct
+- Human
+- Easy to understand
+- SEO-aware
+- Free of unnecessary jargon
 
 Do not mix Malayalam into the interface.
 
-The final website UI should use English unless the project requirements explicitly state otherwise.
+Write for both younger and older users and people with limited digital literacy.
 
-==================================================
-09. CONTENT DENSITY
-==================================================
+Avoid generic AI/marketing phrases such as “transforming the future”, “next-generation solutions”, or “trusted partner for excellence” unless explicitly supported by project content.
 
-Keep the website concise.
+## 9. Anti-AI Design — Strict
 
-Every section must answer a real user question or support a real user action.
-
-Before creating a section ask:
-
-"Does this section materially help the user?"
-
-If the answer is no, remove it.
+The website must not look AI-generated.
 
 Avoid:
+- Random gradients
+- Neon effects
+- Glow
+- Glassmorphism
+- Floating translucent cards
+- Decorative blobs
+- Generic 3D illustrations
+- AI-looking people
+- Excessive rounded cards
+- Excessive pills
+- Generic icon grids
+- Fake statistics
+- Fake trust badges
+- Decorative particles
+- Excessive shadows
+- Huge decorative typography without purpose
+- Repetitive feature-card sections
+- Unnecessary animation
+- Everything being placed inside cards
 
-- repetitive content
-- duplicate explanations
-- multiple sections saying the same thing
-- unnecessary feature lists
-- unnecessary cards
-- unnecessary paragraphs
+Do not fill empty space with decoration.
 
-The website should feel complete without feeling long.
+Whitespace is intentional.
 
-==================================================
-10. INFORMATION ARCHITECTURE
-==================================================
+## 10. Atomic-Level Quality
 
-Use a clear and logical flow.
+The anti-AI requirement applies to every component.
 
-The landing page should generally follow a structure similar to:
+For every element ask:
+- Does it have a purpose?
+- Is the spacing deliberate?
+- Is the hierarchy clear?
+- Is the alignment precise?
+- Does it belong to the same visual system?
+- Does it feel human-designed?
+- Is anything unnecessary?
 
-1. Navigation
-2. Hero
-3. Short introduction / value proposition
-4. Services / what LTS handles
-5. Supporting visual/content section
-6. How it works
-7. FAQ where useful
-8. Strong final CTA
-9. Footer
+Apply this to buttons, nav, cards, service blocks, icons, images, dividers, FAQ, forms, footer, mobile UI, hover states, errors, and empty states.
 
-This is a directional framework, not a requirement to blindly reproduce these sections.
+## 11. Typography
 
-If project research indicates a better structure, use the better structure.
+Primary font: Plus Jakarta Sans.
 
-Do not create unnecessary sections.
+Use one coherent typographic system for:
+- Hero
+- Sections
+- Body
+- Labels
+- Buttons
+- Navigation
+- FAQ
+- Footer
 
-==================================================
-11. HERO RULE
-==================================================
+Avoid unnecessary font families, excessive weights, and oversized typography everywhere.
 
-The hero is one of the most important parts of the website.
+## 12. Visual Direction
 
-Use a strong FULL-BLEED IMAGE-LED HERO where appropriate.
+Use restrained industrial imagery:
+- Demolition sites
+- Machinery
+- Factories
+- Scrap metal
+- Industrial materials
+- Site clearance
+- Real work environments
 
-Do NOT automatically create:
+Prefer realistic photography.
 
-- split image/text hero
-- floating image card
-- image collage
-- multiple cards
-- dashboard hero
-- abstract illustration hero
+Do not use obviously AI-generated people, machinery, buildings, or environments.
 
-The hero should feel like one intentional composition.
+Do not use random stock images merely to fill space.
 
-The hero must communicate quickly:
+## 13. Services
 
-WHAT LTS DOES
-+
-WHO IT IS FOR
-+
-WHAT THE USER CAN DO NEXT
+Use only confirmed services.
 
-Keep the hero copy concise.
+Possible categories, only where supported:
+- Factory / Building Demolition
+- Heavy Machinery Scrap
+- Metal Scrap Removal
+- Industrial Scrap
+- Site Clearance
 
-Use one primary CTA.
+Do not invent capabilities.
 
-Use a secondary CTA only when it genuinely improves the user journey.
+Avoid automatically putting every service into a generic rounded card grid. Consider editorial rows, image/text blocks, numbered sections, or compact lists.
 
-==================================================
-12. IMAGE RULE
-==================================================
+## 14. Process
 
-Use realistic, high-quality imagery.
+Keep the process simple and factual.
 
-Images should support the actual business.
+A possible pattern:
+- 01 — Tell us what you need
+- 02 — Review & quotation
+- 03 — Schedule the work
 
-Avoid generic stock photography whenever possible.
+Use this only if it matches the actual business workflow.
 
-Avoid obvious AI-generated people.
+## 15. Trust
 
-Avoid:
+If the project has no verified portfolio, testimonials, client logos, awards, certifications, or statistics, do not create them.
 
-- unrealistic machinery
-- impossible industrial environments
-- distorted equipment
-- fake-looking workers
-- overly polished AI faces
-- generic corporate handshake imagery
+Build confidence through:
+- Clear information
+- Transparent process
+- Professional visual presentation
+- Realistic imagery
+- Easy contact
+- Good accessibility
+- Functional interactions
 
-Images should feel believable and contextually relevant.
+## 16. CTA
 
-Use fewer, stronger images instead of many mediocre images.
+Primary conversion goal: contact / quote request.
 
-Image cropping must be intentional.
-
-==================================================
-13. SERVICES
-==================================================
-
-Services must be easy to scan.
-
-Do not automatically represent every service as a large rounded card.
-
-Prefer editorial or structured layouts when appropriate.
-
-Each service should communicate:
-
-- what it is
-- what problem it solves
-- enough information to understand the service
-
-Avoid long service descriptions.
-
-Do not add services that are not supported by the project information.
-
-==================================================
-14. CARDS
-==================================================
-
-Cards are NOT the default component.
-
-Only use a card when grouping information genuinely benefits usability.
-
-Avoid:
-
-- card grids everywhere
-- identical repeated cards
-- excessive rounded corners
-- floating cards
-- cards inside cards
-- decorative cards
-
-If a list, editorial layout, split layout, or simple typography can communicate the same information better, use that instead.
-
-==================================================
-15. ICONS
-==================================================
-
-Icons must have a functional purpose.
-
-Do not add icons simply for decoration.
-
-Do not use generic icon grids to make sections look "designed".
-
-If icons are used:
-
-- keep the visual language consistent
-- use them sparingly
-- ensure they communicate something useful
-- maintain consistent sizing
-
-==================================================
-16. CTA RULE
-==================================================
-
-CTAs must be obvious and action-oriented.
-
-Use simple language.
-
-Examples:
-
+Possible labels:
 - Get a Quote
-- Contact Us
 - Request a Quote
+- Contact Us
 - WhatsApp Us
-- Learn More
+- Call Us
 
-Do not use vague marketing CTAs when a direct action is possible.
+Only use real destinations/actions.
 
-Do not create CTA buttons everywhere.
+Do not create fake buttons or competing CTA systems.
 
-Primary CTA should have clear visual priority.
+## 17. Navigation
 
-==================================================
-17. NAVIGATION
-==================================================
+Keep navigation simple.
 
-Navigation must be simple and predictable.
+Likely destinations:
+- Services
+- Process / How It Works
+- FAQ
+- Contact
+
+Mobile navigation must be fully functional.
+
+Avoid unnecessary mega menus and complicated dropdowns.
+
+## 18. Grid and Spacing
+
+Use a coherent responsive grid.
 
 Prioritize:
+- Intentional whitespace
+- Consistent containers
+- Consistent horizontal padding
+- Predictable vertical rhythm
+- Clean alignment
+- Readable line lengths
 
-- logo/brand
-- essential navigation
-- primary CTA
+Do not make every section full-screen.
 
-Avoid unnecessarily complex navigation.
-
-Do not add dropdowns unless there is a real information architecture reason.
-
-Mobile navigation must be intentionally designed.
-
-Do not simply shrink desktop navigation.
-
-==================================================
-18. RESPONSIVE DESIGN
-==================================================
-
-Responsive design is mandatory.
+## 19. Responsive Design
 
 Design intentionally for:
-
-- large desktop
-- standard desktop
-- tablet
-- mobile
-
-Do not treat mobile as an afterthought.
-
-On mobile:
-
-- typography must scale intentionally
-- spacing must be redesigned
-- images must crop correctly
-- navigation must remain usable
-- buttons must be easy to tap
-- sections must maintain hierarchy
-- content must not feel cramped
-
-Do not simply stack desktop components vertically.
-
-==================================================
-19. GRID AND SPACING
-==================================================
-
-Use a consistent layout system.
-
-Define:
-
-- max content width
-- horizontal page padding
-- section spacing
-- column gaps
-- text widths
-- grid behaviour
-- mobile spacing
-
-Use whitespace intentionally.
-
-Do not fill whitespace with unnecessary components.
-
-Alignment must be consistent across the entire website.
-
-==================================================
-20. DESIGN SYSTEM
-==================================================
-
-Before building many components, establish a coherent design system.
-
-Define reusable tokens for:
-
-- colors
-- typography
-- spacing
-- radius
-- shadows
-- borders
-- container widths
-- breakpoints
-- button styles
-- form styles
-
-Do not create one-off styles for every section.
-
-However, do not force every section into the exact same component pattern.
-
-Consistency does not mean repetition.
-
-==================================================
-21. COMPONENT ARCHITECTURE
-==================================================
-
-Build reusable React components.
-
-Examples may include:
-
-- Navbar
-- Button
-- SectionHeading
-- Hero
-- ServiceList
-- Process
-- FAQ
-- CTA
-- Footer
-- Form elements
-
-Create components when they represent meaningful reusable patterns.
-
-Do not over-engineer tiny elements into unnecessary abstractions.
-
-Keep component responsibilities clear.
-
-==================================================
-22. REACT CODE QUALITY
-==================================================
-
-Write clean production-quality React.
-
-Follow:
-
-- semantic HTML
-- reusable components
-- clean component hierarchy
-- readable naming
-- maintainable CSS
-- responsive styles
-- minimal duplication
-- accessible interactions
-
-Avoid:
-
-- huge monolithic components
-- duplicated markup
-- inline style clutter
-- unnecessary dependencies
-- dead code
-- unused components
-- unused imports
-- temporary hacks
-- arbitrary magic numbers where tokens would be better
-
-Do not introduce unnecessary libraries.
-
-==================================================
-23. FUNCTIONALITY
-==================================================
-
-Every visible interactive element must work.
-
-Do not create fake interactions.
+- 320px+
+- 375px
+- 390px
+- 430px
+- Tablet
+- 1366px
+- 1440px
+- 1920px
 
 Check:
+- Hero readability
+- Image crops
+- Navigation
+- Buttons
+- Typography
+- Forms
+- Overflow
+- Section height
+- Touch targets
 
-- navigation
-- mobile menu
-- links
-- buttons
-- forms
-- CTA actions
-- FAQ interactions
-- scrolling
-- responsive behaviour
+Do not merely stack desktop layouts on mobile.
 
-If an external destination is not available, do not invent one.
+## 20. React Architecture
 
-Use the project-provided destination.
+Use clean React architecture and reusable components where repetition exists.
 
-==================================================
-24. FORMS
-==================================================
+Potential components:
+- Header
+- MobileMenu
+- Hero
+- SectionHeading
+- ServiceSection
+- ProcessSection
+- FAQ
+- CTASection
+- Footer
 
-Forms must be simple.
+Do not over-componentize one-off content.
 
-Ask only for information genuinely required.
+Keep data and presentation separate where useful.
 
-Do not create unnecessarily long forms.
+## 21. Functionality
+
+All interactive elements must work:
+- Navigation
+- Anchors
+- Mobile menu
+- FAQ accordion
+- Contact actions
+- WhatsApp/phone actions when supplied
+- Form validation
+- Form success/error states
+- Keyboard interaction
+
+Never leave fake interactions.
+
+## 22. Accessibility
 
 Use:
+- Semantic HTML
+- Correct heading hierarchy
+- Keyboard navigation
+- Visible focus states
+- Sufficient contrast
+- Useful alt text
+- Accessible buttons
+- Accessible form labels
+- Accessible accordions
+- Touch-friendly controls
 
-- clear labels
-- useful placeholders
-- validation
-- accessible error states
-- clear success states
-- usable mobile inputs
-
-Do not make the form visually complicated.
-
-==================================================
-25. ACCESSIBILITY
-==================================================
-
-Accessibility is mandatory.
-
-Use:
-
-- semantic HTML
-- proper heading hierarchy
-- accessible buttons
-- keyboard navigation
-- visible focus states
-- sufficient contrast
-- descriptive alt text
-- proper form labels
-- appropriate ARIA only where necessary
-
-Do not use ARIA as a replacement for semantic HTML.
-
-==================================================
-26. SEO
-==================================================
-
-The website must be SEO-friendly from the beginning.
+## 23. SEO
 
 Implement:
-
-- correct title
-- meta description
-- semantic headings
-- one clear H1 per page where appropriate
-- meaningful page copy
-- descriptive image alt text
-- semantic HTML
-- crawlable content
-- descriptive links
-- clean URL structure
-- appropriate metadata
+- Meaningful page title
+- Meta description
+- One clear H1
+- Logical H2/H3 structure
+- Semantic HTML
+- Descriptive alt text
+- Meaningful anchors
+- Relevant service terminology
+- Open Graph metadata where appropriate
+- Favicon/basic metadata
+- Structured data only when factual and appropriate
 
 Do not keyword-stuff.
 
-SEO copy must still sound natural.
+## 24. Performance
 
-==================================================
-27. PERFORMANCE
-==================================================
+Prioritize:
+- Optimized images
+- Responsive image sizing
+- Lazy loading below the fold
+- Minimal dependencies
+- Efficient React rendering
+- Lightweight JavaScript
+- Limited animation
+- No unnecessary video backgrounds
+- No huge unoptimized assets
 
-The website must be production-conscious.
+## 25. Animation
 
-Optimize:
+Use only subtle purposeful motion.
 
-- image sizes
-- image formats
-- loading behaviour
-- unnecessary JavaScript
-- unnecessary dependencies
-- layout shifts
-- animation overhead
-
-Do not sacrifice performance for decorative effects.
-
-Avoid unnecessary animations.
-
-==================================================
-28. ANIMATION
-==================================================
-
-Animation must be subtle and purposeful.
-
-Use animation only when it improves:
-
-- feedback
-- hierarchy
-- transition
-- navigation
-- perceived responsiveness
+Allowed:
+- Small opacity/transform entrances
+- Restrained hover transitions
+- Smooth FAQ transitions
+- Subtle image movement when genuinely useful
 
 Avoid:
+- Constant motion
+- Excessive scroll effects
+- Parallax everywhere
+- Bouncing
+- Dramatic page transitions
+- Animated counters
 
-- excessive scroll animations
-- constant movement
-- parallax everywhere
-- bouncing elements
-- exaggerated hover effects
-- animated gradients
-- distracting entrances
+## 26. Color
 
-The website must still look excellent with animations disabled.
+Use the actual supplied brand/project colors.
 
-==================================================
-29. NO PLACEHOLDER DESIGN
-==================================================
+Do not invent a complicated palette.
 
-Do not leave the final implementation looking like:
+Avoid neon gradients, random accent colors, rainbow UI, and unnecessary dark-mode styling unless explicitly required.
 
-- wireframes
-- unfinished mockups
-- placeholder UI
-- generic component libraries
-- empty cards
-- lorem ipsum
-- temporary headings
-- placeholder icons
+## 27. Forms
 
-If a section is not ready, improve it or remove it.
+If a contact/quote form exists, keep it short.
 
-Do not compensate for missing content by inventing content.
+Possible fields:
+- Name
+- Phone
+- Email if needed
+- Service required
+- Location
+- Short description
 
-==================================================
-30. NO UNNECESSARY TECHNICAL CONTENT
-==================================================
+Only request useful information.
 
-Do not expose implementation details to website visitors.
+Include labels, validation, useful errors, success feedback, and accessible controls.
 
-Do not add sections about:
+## 28. Do Not Overbuild
 
-- React
-- APIs
-- frameworks
-- databases
-- development
-- technical architecture
+Do not add the following without real source data:
+- Blog
+- Resources
+- Careers
+- Team
+- Testimonials
+- Case studies
+- Project gallery
+- Statistics
+- Awards
+- Certifications
+- Partners
+- Client logos
 
-unless the actual business website requires such information.
+A smaller truthful site is better than a larger fabricated one.
 
-The website is for USERS, not developers.
+## 29. Visual QA
 
-==================================================
-31. VISUAL HIERARCHY
-==================================================
-
-Every section must have a clear hierarchy:
-
-PRIMARY
-↓
-SECONDARY
-↓
-SUPPORTING
-
-Users should immediately understand:
-
-- what the section is about
-- what information matters
-- what action they can take
-
-Do not make every element visually loud.
-
-If everything is emphasized, nothing is emphasized.
-
-==================================================
-32. DESIGN CONSISTENCY
-==================================================
-
-Maintain consistency across:
-
-- buttons
-- headings
-- typography
-- spacing
-- navigation
-- image treatment
-- section padding
-- forms
-- interaction states
-- footer
-- responsive behaviour
-
-Do not redesign the same component differently in different sections without a strong reason.
-
-==================================================
-33. DO NOT MAKE RANDOM CHANGES
-==================================================
-
-When asked to change one part of the website:
-
-DO NOT unnecessarily redesign unrelated sections.
-
-Understand the requested change.
-
-Make the smallest appropriate structural change while maintaining overall consistency.
-
-However, if the requested change creates a clear UX or visual conflict, fix the conflict instead of blindly implementing it.
-
-==================================================
-34. BEFORE IMPLEMENTATION
-==================================================
-
-For major tasks, follow this sequence:
-
-1. Understand the request.
-2. Inspect relevant existing files.
-3. Check the project requirements.
-4. Check the current design system.
-5. Check related components.
-6. Determine the correct UX solution.
-7. Implement.
-8. Review visually.
-9. Review responsively.
-10. Review functionality.
-11. Review accessibility.
-12. Review SEO where applicable.
-13. Remove unnecessary code or UI.
-
-Do not immediately start coding without understanding the relevant context.
-
-==================================================
-35. VISUAL QA
-==================================================
-
-After implementing a significant section, visually inspect it.
+Before completion, inspect desktop and mobile.
 
 Check:
-
-- alignment
-- spacing
-- typography
-- image quality
-- hierarchy
-- section height
-- whitespace
-- CTA visibility
-- responsive behaviour
-- visual consistency
+- Alignment
+- Container widths
+- Spacing
+- Section rhythm
+- Image cropping
+- Typography
+- Button sizes
+- Border-radius consistency
+- States
+- Copy
+- No placeholders
+- No accidental Malayalam
+- No duplicate content
+- No overflow
+- No broken layouts
 
 Ask:
+“Does this look like a finished website designed by an experienced product/UI designer?”
 
-"Does this look like a finished professional website?"
+If not, refine it.
 
-not:
+## 30. Pixel-Perfect Standard
 
-"Does this technically render?"
+Pixel-perfect means:
+- Precise spacing
+- Consistent alignment
+- Deliberate typography
+- Accurate responsive behavior
+- Consistent component dimensions
+- Clean hierarchy
+- No accidental offsets
+- No unfinished states
 
-Technical correctness alone is not enough.
+Do not blindly copy references.
 
-==================================================
-36. PIXEL-PERFECT STANDARD
-==================================================
+## 31. Change Management
 
-When reference screenshots or design specifications are provided, reproduce the intended:
+Before changing something:
+- Identify the actual problem.
+- Fix the root cause.
+- Preserve working functionality.
+- Recheck surrounding components.
+- Recheck responsive behavior.
 
-- dimensions
-- proportions
-- spacing
-- typography hierarchy
-- alignment
-- image placement
-- component sizing
-- responsive behaviour
+When a complete redesign is requested, restructure freely and remove obsolete components.
 
-as accurately as possible.
+## 32. Final Decision Hierarchy
 
-Do not approximate important visual relationships.
+Prioritize:
+1. Accuracy of business information
+2. User clarity
+3. Usability
+4. Accessibility
+5. Visual hierarchy
+6. Brand consistency
+7. Responsive quality
+8. Performance
+9. SEO
+10. Decorative detail
 
-At the same time, do not copy another website's exact design.
+Never sacrifice clarity for novelty.
 
-Pixel precision applies to the intended LTS design system and provided references.
+## 33. Non-Negotiable Summary
 
-==================================================
-37. DESIGN REVIEW CHECK
-==================================================
+The finished website must be:
+- Original
+- Minimal
+- Premium
+- Industrial
+- Human
+- English-only
+- Plus Jakarta Sans
+- Full-bleed image hero
+- Short and focused
+- Easy to understand
+- SEO-friendly
+- Responsive
+- Accessible
+- Functional
+- Production-ready
+- Pixel-precise
+- Free of fabricated proof
+- Free of generic AI visual patterns
 
-Before considering a page complete, inspect it from these perspectives:
+The website should feel deliberately designed, not generated.
 
-UX:
-Can a first-time visitor understand the business quickly?
+Before every major implementation decision ask:
+“Is this genuinely useful, or am I adding it because AI-generated websites commonly do this?”
 
-UI:
-Does the page have clear hierarchy and visual consistency?
-
-Content:
-Is the copy concise and factual?
-
-Visual:
-Does it look intentionally designed rather than generated?
-
-Accessibility:
-Can different users navigate and understand it?
-
-Responsive:
-Does it work properly on mobile and desktop?
-
-SEO:
-Can search engines understand the page?
-
-Engineering:
-Is the implementation maintainable?
-
-Conversion:
-Is the next action obvious without being aggressive?
-
-==================================================
-38. ANTI-WIRE-FRAME CHECK
-==================================================
-
-The final website must NOT resemble a wireframe.
-
-If the page starts looking like:
-
-[heading]
-[text]
-[three cards]
-[heading]
-[three cards]
-[heading]
-[three cards]
-
-STOP.
-
-Break the repetition using:
-
-- typography
-- image composition
-- editorial layouts
-- varied but consistent section structures
-- whitespace
-- asymmetric composition where appropriate
-- strong photography
-
-Do not solve visual problems by adding more cards.
-
-==================================================
-39. ANTI-OVERDESIGN CHECK
-==================================================
-
-The opposite is also prohibited.
-
-Do not solve a simple page by adding:
-
-- more gradients
-- more animations
-- more icons
-- more cards
-- more shapes
-- more sections
-- more decorative elements
-
-The target is controlled simplicity.
-
-==================================================
-40. FINAL DECISION RULE
-==================================================
-
-Whenever there are multiple possible design solutions, prioritize them in this order:
-
-1. User clarity
-2. Business clarity
-3. Visual hierarchy
-4. Simplicity
-5. Accessibility
-6. Responsiveness
-7. Performance
-8. SEO
-9. Visual polish
-10. Decorative enhancement
-
-Never reverse this order.
-
-==================================================
-41. MOST IMPORTANT RULE
-==================================================
-
-DO NOT TRY TO MAKE THE WEBSITE LOOK "IMPRESSIVE".
-
-TRY TO MAKE IT LOOK:
-
-INTENTIONAL
-+
-CLEAR
-+
-PREMIUM
-+
-HUMAN
-+
-USEFUL
-+
-TRUSTWORTHY
-
-A simple, beautifully composed section is better than a complicated section full of UI elements.
-
-If something does not need to exist, remove it.
-
-If content can be shorter, shorten it.
-
-If a component can be simpler, simplify it.
-
-If an image can communicate the idea better than a card, use the image.
-
-If typography can solve the hierarchy problem, use typography.
-
-If spacing can solve the visual problem, use spacing.
-
-Always prefer design quality over design quantity.
+If it is the second, remove it.
