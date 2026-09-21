@@ -10,7 +10,7 @@ interface ServiceEntry {
 const SERVICES: ServiceEntry[] = [
   {
     number: '01',
-    title: 'Factory & Shed Demolition',
+    title: 'Factory / Building Demolition',
     description: 'We safely dismantle factory buildings, industrial sheds, and steel structures using heavy machinery and trained cutting crews.'
   },
   {
@@ -20,12 +20,12 @@ const SERVICES: ServiceEntry[] = [
   },
   {
     number: '03',
-    title: 'Metal Scrap Purchasing',
+    title: 'Metal Scrap Removal',
     description: 'We buy iron beams, roofing sheets, copper cables, and scrap metal at fair market rates, weighed on certified public weighbridges.'
   },
   {
     number: '04',
-    title: 'Complete Site Clearance',
+    title: 'Site Clearance',
     description: 'We break concrete foundations, haul all rubble away in tipper trucks, and level the ground clean ready for new construction.'
   }
 ];

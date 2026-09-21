@@ -4,7 +4,7 @@ import { SITE_CONFIG, getWhatsAppUrl } from '../siteConfig';
 
 export const MobileStickyBar: React.FC = () => {
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-xs">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 px-3 py-2.5 shadow-md">
       <div className="flex items-center gap-2.5 max-w-md mx-auto">
         <a
           href={`tel:${SITE_CONFIG.phoneTel}`}

@@ -9,18 +9,18 @@ interface ProcessStep {
 const STEPS: ProcessStep[] = [
   {
     number: '01',
-    title: 'Call or WhatsApp Us',
-    description: 'Call +91 96457 77401 or send site photos on WhatsApp to describe your building, shed, or scrap machinery.'
+    title: 'Tell us what you need',
+    description: 'Call +91 96457 77401 or message us on WhatsApp with structural photos and location details of the building or scrap machinery.'
   },
   {
     number: '02',
-    title: 'Free Site Inspection',
-    description: 'Our site supervisor visits your location anywhere in Kerala at zero cost and provides a clear, written proposal.'
+    title: 'Review & quotation',
+    description: 'Our site supervisor visits your location anywhere in Kerala at zero cost, calculates salvageable scrap tonnage, and provides a clear written quotation.'
   },
   {
     number: '03',
-    title: 'Demolition & Handover',
-    description: 'We dismantle the structure, weigh all scrap metal on certified public scales, haul away the rubble, and hand over a clean plot.'
+    title: 'Schedule the work',
+    description: 'We safely dismantle the structure, weigh all scrap metal on certified public weighbridges, haul away all rubble, and hand over a clean, level plot.'
   }
 ];
 

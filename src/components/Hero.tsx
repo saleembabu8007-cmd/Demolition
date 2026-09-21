@@ -48,14 +48,22 @@ export const Hero: React.FC = () => {
             We dismantle factory sheds, purchase machinery scrap at fair weighbridge rates, and clear the site clean for your next project.
           </p>
 
-          {/* Action Pair */}
+          {/* Action Pair - Clear Hierarchy per Rule 6 */}
           <div className="flex flex-wrap items-center gap-3.5 sm:gap-4">
             <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-slate-950 font-bold text-sm sm:text-base transition-colors shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            >
+              <span>Get a Quote</span>
+              <ArrowRight className="w-4 h-4" strokeWidth={2.25} aria-hidden="true" />
+            </a>
+
+            <a
               href={`tel:${SITE_CONFIG.phoneTel}`}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-slate-950 font-semibold text-sm sm:text-base transition-colors shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-slate-900/90 hover:bg-slate-850 active:bg-slate-800 text-white border border-slate-750 font-semibold text-sm sm:text-base transition-colors shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               aria-label={`Call direct: ${SITE_CONFIG.phoneDisplay}`}
             >
-              <Phone className="w-4 h-4 text-slate-950" strokeWidth={2.25} aria-hidden="true" />
+              <Phone className="w-4 h-4 text-amber-400" strokeWidth={2} aria-hidden="true" />
               <span>Call: {SITE_CONFIG.phoneDisplay}</span>
             </a>
 
@@ -63,19 +71,11 @@ export const Hero: React.FC = () => {
               href={getWhatsAppUrl('Hello LTS, I would like to request a site visit for industrial demolition or scrap removal.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-medium text-sm sm:text-base transition-colors shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-md bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-medium text-sm sm:text-base transition-colors shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
               aria-label="Contact our team on WhatsApp"
             >
               <MessageCircle className="w-4 h-4 fill-white" aria-hidden="true" />
               <span>WhatsApp Us</span>
-            </a>
-
-            <a
-              href="#services"
-              className="inline-flex items-center gap-1.5 px-3 py-3.5 text-slate-300 hover:text-white text-sm sm:text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 rounded-sm"
-            >
-              <span>View Services</span>
-              <ArrowRight className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
             </a>
           </div>
 
