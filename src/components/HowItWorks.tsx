@@ -9,18 +9,18 @@ interface ProcessStep {
 const STEPS: ProcessStep[] = [
   {
     number: '01',
-    title: 'Tell us what you need',
-    description: 'Call our direct desk or share site photos and structural dimensions via WhatsApp for an immediate preliminary review.'
+    title: 'Call or WhatsApp Us',
+    description: 'Call +91 96457 77401 or send site photos on WhatsApp to describe your building, shed, or scrap machinery.'
   },
   {
     number: '02',
-    title: 'Review & quotation',
-    description: 'Our site supervisor visits at zero charge, assesses access and metal tonnage, and provides a clear written proposal.'
+    title: 'Free Site Inspection',
+    description: 'Our site supervisor visits your location anywhere in Kerala at zero cost and provides a clear, written proposal.'
   },
   {
     number: '03',
-    title: 'Schedule the work',
-    description: 'We systematically dismantle the building, weigh all salvaged metal on public weighbridges, and haul away all concrete rubble.'
+    title: 'Demolition & Handover',
+    description: 'We dismantle the structure, weigh all scrap metal on certified public scales, haul away the rubble, and hand over a clean plot.'
   }
 ];
 
@@ -35,8 +35,8 @@ export const HowItWorks: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12 sm:mb-16 space-y-3">
-          <span className="text-xs font-semibold text-amber-600 tracking-wider uppercase font-mono">
-            (How It Works)
+          <span className="text-xs font-bold text-amber-600 tracking-widest uppercase font-mono">
+            HOW WE WORK
           </span>
           <h2 
             id="process-heading"

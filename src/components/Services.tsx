@@ -10,23 +10,23 @@ interface ServiceEntry {
 const SERVICES: ServiceEntry[] = [
   {
     number: '01',
-    title: 'Factory Demolition',
-    description: 'Sequential mechanical teardown of manufacturing facilities, processing plants, and structural steel sheds.'
+    title: 'Factory & Shed Demolition',
+    description: 'We safely dismantle factory buildings, industrial sheds, and steel structures using heavy machinery and trained cutting crews.'
   },
   {
     number: '02',
     title: 'Heavy Machinery Scrap',
-    description: 'On-site rigging, gas cutting, and purchase of obsolete generators, chillers, boilers, transformers, and industrial tanks.'
+    description: 'We dismantle, lift, and buy heavy machinery on site—including generators, chillers, boilers, transformers, and industrial tanks.'
   },
   {
     number: '03',
-    title: 'Metal Scrap Removal',
-    description: 'Direct wholesale purchasing of structural iron, heavy copper cables, and industrial alloys weighed on computerized public scales.'
+    title: 'Metal Scrap Purchasing',
+    description: 'We buy iron beams, roofing sheets, copper cables, and scrap metal at fair market rates, weighed on certified public weighbridges.'
   },
   {
     number: '04',
-    title: 'Site Clearance',
-    description: 'Complete hydraulic excavation of concrete foundations, rubble haulage, and ground leveling for immediate handover.'
+    title: 'Complete Site Clearance',
+    description: 'We break concrete foundations, haul all rubble away in tipper trucks, and level the ground clean ready for new construction.'
   }
 ];
 
@@ -44,8 +44,8 @@ export const Services: React.FC = () => {
           
           {/* Left: Section Header & 1 Strong Service Image */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-            <span className="text-xs font-semibold text-amber-600 tracking-wider uppercase font-mono">
-              (Services)
+            <span className="text-xs font-bold text-amber-600 tracking-widest uppercase font-mono">
+              OUR SERVICES
             </span>
 
             <h2 
@@ -56,25 +56,24 @@ export const Services: React.FC = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-md font-normal">
-              A single experienced crew for dismantling structures, salvaging industrial metal, and clearing land ready for new use.
+              A single experienced crew for dismantling structures, buying heavy scrap metal, and clearing land ready for new use.
             </p>
 
             {/* 1 Strong Service Image */}
             <div className="pt-2">
               <div className="relative rounded-md overflow-hidden bg-slate-200 aspect-4/3 sm:aspect-16/11 border border-slate-200">
                 <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=85"
-                  alt="Mechanical demolition and industrial torch cutting team dismantling structural steel"
+                  src="/images/services-cutting.jpg"
+                  alt="LTS cutting crew dismantling heavy industrial steel beams on site"
                   loading="lazy"
                   decoding="async"
-                  referrerPolicy="no-referrer"
                   width="1400"
-                  height="960"
+                  height="1050"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
               <span className="block text-xs text-slate-500 mt-2 font-mono">
-                In-house mechanical dismantling and torch cutting crews
+                Trained cutting crews dismantling structural steel on site
               </span>
             </div>
           </div>

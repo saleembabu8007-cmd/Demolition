@@ -21,7 +21,7 @@ const FAQ_ITEMS: FaqEntry[] = [
   },
   {
     question: 'How quickly can you inspect our site?',
-    answer: 'Our supervisor can visit your site within 24 to 48 hours anywhere across Kerala. If you send photos or structural dimensions via WhatsApp, we can provide an initial review within hours.'
+    answer: 'Our supervisor can visit your site within 24 to 48 hours anywhere across Kerala. You can also call us directly at +91 96457 77401 or send site photos via WhatsApp for an immediate initial assessment.'
   }
 ];
 
@@ -42,8 +42,8 @@ export const Faq: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12 sm:mb-14 space-y-3">
-          <span className="text-xs font-semibold text-amber-600 tracking-wider uppercase font-mono">
-            (Frequently Asked Questions)
+          <span className="text-xs font-bold text-amber-600 tracking-widest uppercase font-mono">
+            FREQUENTLY ASKED QUESTIONS
           </span>
           <h2 
             id="faq-heading"

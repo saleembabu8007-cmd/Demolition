@@ -10,21 +10,21 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18">
           
-          {/* Logo Left - Industrial Structural Identity */}
+          {/* Logo Left - Bold Industrial Architectural Monogram */}
           <a 
             href="#" 
-            className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm p-1 -m-1"
-            aria-label="Kerala Demolition & Scrap Services"
+            className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm p-1 -m-1"
+            aria-label="LTS Demolition & Scrap Services"
           >
-            <div className="w-8 h-8 rounded-md bg-slate-950 flex items-center justify-center text-amber-400 border border-slate-800 transition-colors group-hover:bg-slate-900 shrink-0">
-              <Factory className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
+            <div className="w-9 h-9 rounded-sm bg-slate-950 flex items-center justify-center text-amber-400 font-black text-sm tracking-tighter border border-slate-800 transition-colors group-hover:border-amber-400/50 shrink-0">
+              LTS
             </div>
             <div className="flex flex-col">
-              <span className="font-semibold text-slate-950 text-base tracking-tight leading-tight">
+              <span className="font-bold text-slate-950 text-base tracking-tight leading-tight">
                 {SITE_CONFIG.shortName}
               </span>
-              <span className="text-[11px] text-slate-500 font-normal leading-none mt-0.5">
-                Demolition & Industrial Scrap
+              <span className="text-[11px] text-slate-500 font-medium leading-none mt-0.5">
+                Industrial Demolition & Heavy Scrap
               </span>
             </div>
           </a>

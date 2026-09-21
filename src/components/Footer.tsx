@@ -11,13 +11,18 @@ export const Footer: React.FC = () => {
         
         {/* Editorial Content Row */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-slate-900">
-          <div>
-            <span className="text-base font-semibold text-white tracking-tight">
-              {SITE_CONFIG.shortName}
-            </span>
-            <p className="text-xs text-slate-400 mt-1 font-normal">
-              Controlled industrial demolition, plant dismantling, and heavy scrap removal across Kerala.
-            </p>
+          <div className="flex items-start gap-3">
+            <div className="w-8 h-8 rounded-sm bg-slate-900 flex items-center justify-center text-amber-400 font-black text-xs tracking-tighter border border-slate-800 shrink-0 mt-0.5">
+              LTS
+            </div>
+            <div>
+              <span className="text-base font-bold text-white tracking-tight">
+                {SITE_CONFIG.name}
+              </span>
+              <p className="text-xs text-slate-400 mt-1 font-normal max-w-md">
+                Controlled industrial demolition, plant dismantling, and heavy scrap purchasing across Kerala.
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-6 text-xs sm:text-sm">
