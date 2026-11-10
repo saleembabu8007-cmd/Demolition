@@ -1,96 +1,117 @@
-import React, { useState } from 'react';
-import { Phone, Factory, ArrowRight, Menu, X, MessageCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Phone, ArrowRight, Menu, X, MessageCircle } from 'lucide-react';
 import { SITE_CONFIG, getWhatsAppUrl } from '../siteConfig';
+import { BrandLogo } from './BrandLogo';
+import { Button } from './ui';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Accessibility: Close mobile menu when Escape key is pressed
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [mobileMenuOpen]);
+
+  // Accessibility: Prevent background scrolling when mobile drawer is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-xs transition-colors">
+    <header className="sticky top-0 z-40 bg-[#07131D]/95 backdrop-blur-md border-b border-white/10 shadow-md transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18">
           
-          {/* Logo Left - Bold Industrial Architectural Monogram */}
+          {/* Logo Left - Official Azi Engineering Works Reversed Horizontal Vector Logo */}
           <a 
             href="#" 
-            className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm p-1 -m-1"
-            aria-label="LTS Demolition & Scrap Services"
+            className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB800] focus-visible:ring-offset-2 focus-visible:ring-offset-[#07131D] rounded-sm py-1 -my-1"
+            aria-label={`${SITE_CONFIG.name} homepage`}
           >
-            <div className="w-9 h-9 rounded-sm bg-slate-950 flex items-center justify-center text-amber-400 font-black text-sm tracking-tighter border border-slate-800 transition-colors group-hover:border-amber-400/50 shrink-0">
-              LTS
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-slate-950 text-base tracking-tight leading-tight">
-                {SITE_CONFIG.shortName}
-              </span>
-              <span className="text-[11px] text-slate-500 font-medium leading-none mt-0.5">
-                Industrial Demolition & Heavy Scrap
-              </span>
-            </div>
+            <BrandLogo variant="reversed-horizontal" priority={true} className="h-8.5 sm:h-9.5 md:h-10 w-auto" />
           </a>
 
-          {/* Minimal Editorial Navigation Center */}
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
-            <a 
-              href="#about" 
-              className="text-sm font-medium text-slate-600 hover:text-slate-950 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm px-1 py-0.5"
-            >
-              About
-            </a>
+          {/* Minimal Editorial Navigation Center: Services, How It Works, Clearance Standard, FAQs, Contact */}
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Main Navigation">
             <a 
               href="#services" 
-              className="text-sm font-medium text-slate-600 hover:text-slate-950 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm px-1 py-0.5"
+              className="h-11 inline-flex items-center text-sm font-semibold text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB800] rounded-sm px-3"
             >
               Services
             </a>
             <a 
-              href="#approach" 
-              className="text-sm font-medium text-slate-600 hover:text-slate-950 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm px-1 py-0.5"
-            >
-              Approach
-            </a>
-            <a 
               href="#how-it-works" 
-              className="text-sm font-medium text-slate-600 hover:text-slate-950 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm px-1 py-0.5"
+              className="h-11 inline-flex items-center text-sm font-semibold text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB800] rounded-sm px-3"
             >
               How It Works
             </a>
             <a 
-              href="#faq" 
-              className="text-sm font-medium text-slate-600 hover:text-slate-950 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded-sm px-1 py-0.5"
+              href="#why-azi" 
+              className="h-11 inline-flex items-center text-sm font-semibold text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB800] rounded-sm px-3"
             >
-              FAQ
+              Clearance Standard
+            </a>
+            <a 
+              href="#faq" 
+              className="h-11 inline-flex items-center text-sm font-semibold text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB800] rounded-sm px-3"
+            >
+              FAQs
+            </a>
+            <a 
+              href="#contact" 
+              className="h-11 inline-flex items-center text-sm font-semibold text-slate-300 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB800] rounded-sm px-3"
+            >
+              Contact
             </a>
           </nav>
 
-          {/* Primary Action Right - Crisp Architectural Geometry */}
-          <div className="flex items-center gap-4">
+          {/* Actions Right: Direct Phone + Primary CTA "Request a Quote" */}
+          <div className="flex items-center gap-3 sm:gap-4">
             <a
               href={`tel:${SITE_CONFIG.phoneTel}`}
-              className="hidden md:inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-700 hover:text-slate-950 transition-colors"
-              aria-label={`Call ${SITE_CONFIG.phoneDisplay}`}
+              className="hidden xl:inline-flex items-center gap-2 text-xs xl:text-sm font-bold text-slate-200 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB800] rounded-sm px-2 py-1"
+              aria-label={`Call direct: ${SITE_CONFIG.phoneDisplay}`}
             >
-              <Phone className="w-3.5 h-3.5 text-amber-600" strokeWidth={1.75} aria-hidden="true" />
+              <Phone className="w-3.5 h-3.5 text-[#FFB800]" strokeWidth={2.5} aria-hidden="true" />
               <span>{SITE_CONFIG.phoneDisplay}</span>
             </a>
 
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-md bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-slate-950 font-semibold text-xs sm:text-sm transition-colors shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
-            >
-              <span>Get a Quote</span>
-              <ArrowRight className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />
-            </a>
+            <div className="hidden sm:block">
+              <Button
+                href="#contact"
+                variant="primary"
+                size="sm"
+                icon={<ArrowRight className="w-3.5 h-3.5 text-[#112A3E]" strokeWidth={2.25} aria-hidden="true" />}
+                className="shadow-xs font-bold text-xs sm:text-sm tracking-tight"
+              >
+                Request a Quote
+              </Button>
+            </div>
 
-            {/* Mobile menu toggle */}
+            {/* Mobile menu toggle with WCAG 44x44px Touch Target */}
             <button
               type="button"
+              id="mobile-nav-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-1.5 rounded-md text-slate-700 hover:text-slate-950 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
+              className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center rounded-sm text-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB800] transition-colors"
               aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-nav-panel"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" strokeWidth={1.75} /> : <Menu className="w-5 h-5" strokeWidth={1.75} />}
+              {mobileMenuOpen ? <X className="w-6 h-6" strokeWidth={2} /> : <Menu className="w-6 h-6" strokeWidth={2} />}
             </button>
           </div>
 
@@ -98,62 +119,81 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile menu panel */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-200 bg-white space-y-3">
-            <nav className="flex flex-col space-y-1 text-sm font-medium text-slate-800">
-              <a 
-                href="#about" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-md hover:bg-slate-100"
-              >
-                About
-              </a>
+          <div 
+            id="mobile-nav-panel"
+            className="md:hidden py-4 border-t border-white/10 bg-[#07131D] space-y-3"
+            role="dialog"
+            aria-label="Mobile Navigation"
+          >
+            <nav className="flex flex-col space-y-1">
               <a 
                 href="#services" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-md hover:bg-slate-100"
+                className="px-3 py-3 text-base font-semibold text-slate-200 hover:text-white hover:bg-white/5 rounded-xs transition-colors"
               >
                 Services
               </a>
               <a 
-                href="#approach" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-md hover:bg-slate-100"
-              >
-                Approach
-              </a>
-              <a 
                 href="#how-it-works" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-md hover:bg-slate-100"
+                className="px-3 py-3 text-base font-semibold text-slate-200 hover:text-white hover:bg-white/5 rounded-xs transition-colors"
               >
                 How It Works
               </a>
               <a 
+                href="#why-azi" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-3 text-base font-semibold text-slate-200 hover:text-white hover:bg-white/5 rounded-xs transition-colors"
+              >
+                Clearance Standard
+              </a>
+              <a 
                 href="#faq" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-md hover:bg-slate-100"
+                className="px-3 py-3 text-base font-semibold text-slate-200 hover:text-white hover:bg-white/5 rounded-xs transition-colors"
               >
-                FAQ
+                FAQs
+              </a>
+              <a 
+                href="#contact" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-3 text-base font-semibold text-slate-200 hover:text-white hover:bg-white/5 rounded-xs transition-colors"
+              >
+                Contact
               </a>
             </nav>
 
-            <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-              <a
-                href={getWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-md bg-emerald-50 text-emerald-900 border border-emerald-300 font-medium text-sm"
+            <div className="pt-3 border-t border-white/10 space-y-2.5">
+              <Button
+                href="#contact"
+                variant="primary"
+                size="md"
+                fullWidth
+                onClick={() => setMobileMenuOpen(false)}
+                icon={<ArrowRight className="w-4 h-4 text-[#112A3E]" strokeWidth={2.25} aria-hidden="true" />}
               >
-                <MessageCircle className="w-4 h-4 fill-emerald-600 text-emerald-600" />
-                <span>WhatsApp Us</span>
-              </a>
-              <a
-                href={`tel:${SITE_CONFIG.phoneTel}`}
-                className="flex items-center justify-center gap-2 py-2.5 px-4 rounded-md bg-slate-100 text-slate-900 font-medium text-sm"
-              >
-                <Phone className="w-4 h-4 text-slate-700" />
-                <span>Call: {SITE_CONFIG.phoneDisplay}</span>
-              </a>
+                Request a Quote
+              </Button>
+
+              <div className="grid grid-cols-2 gap-2 pt-1">
+                <a
+                  href={`tel:${SITE_CONFIG.phoneTel}`}
+                  className="flex items-center justify-center gap-2 py-3 px-3 text-xs font-bold text-white bg-white/10 hover:bg-white/15 rounded-xs border border-white/15 transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-[#FFB800]" aria-hidden="true" />
+                  <span>Call Us</span>
+                </a>
+
+                <a
+                  href={getWhatsAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 py-3 px-3 text-xs font-bold text-white bg-white/10 hover:bg-white/15 rounded-xs border border-white/15 transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4 text-[#FFB800]" aria-hidden="true" />
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </div>
         )}

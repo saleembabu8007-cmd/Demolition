@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Azi social badge — white</title>
+  <desc id="desc">Rounded white square badge with original gold-and-navy emblem.</desc>
+  <rect x="0.5" y="0.5" width="319" height="319" rx="64" fill="#FFFFFF" stroke="#E9EEF2"/>
+<g id="azi-symbol" transform="translate(47.000 83.000) scale(1.1188119)">
+  <path id="gold-left-stroke" fill="#FFB800" d="M0 144 L44 144 L108 56 L89 27 Z"/>
+  <path id="apex-stroke" fill="#112A3E" d="M89 27 L107 0 L139 46 L119 74 Z"/>
+  <path id="right-chevron" fill="#112A3E" d="M59 144 L146 56 L202 144 L161 144 L141 107 L105 144 Z"/>
+</g>
+</svg>

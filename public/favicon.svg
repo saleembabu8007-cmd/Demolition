@@ -1,5 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <rect width="32" height="32" rx="8" fill="#0f172a" />
-  <path d="M16 4L6 8V15C6 21.5 10.3 27.5 16 29C21.7 27.5 26 21.5 26 15V8L16 4Z" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" stroke-linejoin="round" />
-  <path d="M11 16L15 20L21 12" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Azi social badge — navy</title>
+  <desc id="desc">Rounded navy square badge with gold-and-white abstract A.</desc>
+  <rect x="0" y="0" width="320" height="320" rx="65" fill="#0E2538"/>
+<g id="azi-symbol" transform="translate(47.000 83.000) scale(1.1188119)">
+  <path id="gold-left-stroke" fill="#FFB800" d="M0 144 L44 144 L108 56 L89 27 Z"/>
+  <path id="apex-stroke" fill="#FFFFFF" d="M89 27 L107 0 L139 46 L119 74 Z"/>
+  <path id="right-chevron" fill="#FFFFFF" d="M59 144 L146 56 L202 144 L161 144 L141 107 L105 144 Z"/>
+</g>
 </svg>

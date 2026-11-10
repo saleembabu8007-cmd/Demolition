@@ -1,72 +1,95 @@
 import React from 'react';
+import { SectionWrapper, SectionHeading } from './ui';
+
+interface CredibilityPoint {
+  num: string;
+  title: string;
+  description: string;
+}
+
+const CREDIBILITY_POINTS: CredibilityPoint[] = [
+  {
+    num: '01',
+    title: 'Certified Public Weighbridges',
+    description: 'Every truckload of salvaged steel and scrap metal is routed through computerized, licensed public weighbridges. You receive stamped digital weighment slips recording gross, tare, and net weights.',
+  },
+  {
+    num: '02',
+    title: 'Complete Rubble Clearance',
+    description: 'We do not abandon broken concrete footings or masonry debris. Hydraulic breakers demolish foundations, tipper trucks haul all rubble away, and the plot is graded clean for immediate construction.',
+  },
+  {
+    num: '03',
+    title: 'Direct Scrap Value Offset',
+    description: 'Recovered metal scrap value is credited directly against machinery rental and labor costs under a single agreement, reducing out-of-pocket project expense.',
+  },
+  {
+    num: '04',
+    title: 'Zero-Fee Site Inspection',
+    description: 'Our engineer visits your property anywhere across Kerala at no cost to evaluate structural dimensions, safety access, and scrap tonnage before providing a firm written quotation.',
+  },
+];
 
 export const Approach: React.FC = () => {
   return (
-    <section 
-      id="approach" 
-      aria-labelledby="approach-heading"
-      className="py-20 sm:py-28 lg:py-32 bg-slate-950 text-white border-b border-slate-900"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <SectionWrapper id="why-azi" background="daylight" aria-labelledby="credibility-heading">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-start">
         
-        {/* Section Header */}
-        <div className="max-w-3xl mb-10 sm:mb-14 space-y-4">
-          <span className="text-xs font-bold text-amber-400 tracking-widest uppercase font-mono">
-            OUR COMMITMENT
-          </span>
-
-          <h2 
-            id="approach-heading"
-            className="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-white leading-[1.16]"
-          >
-            We don't leave rubble behind.
-          </h2>
-
-          <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl">
-            Many scrap buyers take only valuable copper and structural steel, leaving broken concrete and hazardous waste on your land. At LTS, we handle the complete job: dismantling the building, purchasing the scrap, carting away all rubble in trucks, and leveling the ground.
-          </p>
-        </div>
-
-        {/* 1 LARGE IMAGE MOMENT - Authentic Foundation Excavation & Rubble Clearance */}
-        <div className="relative rounded-md overflow-hidden bg-slate-900 border border-slate-800/90 aspect-16/9 sm:aspect-21/9 mb-10 sm:mb-14">
-          <img
-            src="/images/rubble-clearance.jpg"
-            alt="Hydraulic excavator loading foundation concrete rubble into tipper truck with leveled ground in foreground"
-            loading="lazy"
-            decoding="async"
-            width="2200"
-            height="1240"
-            className="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.05]"
+        {/* Left Column: Heading + Authentic Field Evidence Photograph */}
+        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+          <SectionHeading
+            id="credibility-heading"
+            eyebrow="Clearance Standard"
+            title="How we work on your property."
+            description="Direct contractor execution without middlemen, surprise deductions, or abandoned rubble."
+            className="mb-0"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-          <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-6 text-xs text-slate-300 font-mono">
-            Foundation rubble clearance & ground leveling in progress
-          </div>
+
+          {/* Authentic Field Photographic Evidence */}
+          <figure className="rounded-sm overflow-hidden bg-white border border-slate-300/80 shadow-xs">
+            <div className="relative aspect-[16/10] overflow-hidden bg-slate-200">
+              <picture className="block w-full h-full">
+                <source type="image/webp" srcSet="/images/rubble-clearance.webp" />
+                <img
+                  src="/images/rubble-clearance.jpg"
+                  alt="Hydraulic excavator loading broken concrete rubble into a tipper truck for off-site disposal"
+                  decoding="async"
+                  width="1376"
+                  height="768"
+                  className="w-full h-full object-cover object-center filter contrast-[1.03] brightness-[0.98]"
+                />
+              </picture>
+            </div>
+            <figcaption className="p-3 bg-white border-t border-slate-200 flex items-center justify-between text-xs text-slate-600 font-medium select-none">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FFB800] shrink-0" aria-hidden="true" />
+                <span>Foundation rubble removal & plot grading</span>
+              </div>
+              <span className="text-slate-500 font-mono text-[11px]">Field Operations</span>
+            </figcaption>
+          </figure>
         </div>
 
-        {/* 3 Semantic Subsections under H2 */}
-        <div className="pt-8 border-t border-slate-800/90 grid grid-cols-1 md:grid-cols-3 gap-8 text-slate-300">
-          <div className="space-y-1.5">
-            <h3 className="font-semibold text-white text-base">Certified Weighbridge</h3>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">
-              Every kilogram of salvaged scrap is weighed on computerized public weighbridges with printed slips.
-            </p>
-          </div>
-          <div className="space-y-1.5">
-            <h3 className="font-semibold text-white text-base">Direct Cost Offset</h3>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">
-              The fair value of your salvaged metal is credited directly against machinery and teardown labor costs.
-            </p>
-          </div>
-          <div className="space-y-1.5">
-            <h3 className="font-semibold text-white text-base">Level, Clean Plot</h3>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">
-              All concrete, bricks, and debris are hauled away, leaving your land graded and ready to build.
-            </p>
-          </div>
+        {/* Right Column: 4 Factual Dependability Commitments with Crisp Numbered Hierarchy */}
+        <div className="lg:col-span-7 divide-y divide-slate-200 border-y border-slate-200 bg-white rounded-sm px-6 sm:px-8 shadow-xs">
+          {CREDIBILITY_POINTS.map((point) => (
+            <div key={point.num} className="py-7 sm:py-8 first:pt-6 last:pb-6 flex items-start gap-4 sm:gap-6">
+              <span className="font-mono text-xs sm:text-sm font-bold text-[#A37500] bg-amber-50/80 border border-amber-200/60 rounded-xs px-2 py-0.5 shrink-0 mt-0.5">
+                {point.num}
+              </span>
+              <div className="space-y-1.5">
+                <h3 className="text-lg sm:text-xl font-bold text-[#112A3E] tracking-tight">
+                  {point.title}
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                  {point.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

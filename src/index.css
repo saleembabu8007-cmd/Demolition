@@ -1,8 +1,38 @@
 @import "tailwindcss";
 
+@theme {
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Primary Brand: Industrial Precision Yellow */
+  --color-brand-yellow: #FFB800;
+  --color-brand-yellow-hover: #E5A600;
+  --color-brand-yellow-active: #CC9400;
+
+  /* Deep Engineering Navy System (Derived from Official Vector Asset #112A3E) */
+  --color-navy-base: #112A3E;          /* Official Logo Navy */
+  --color-navy-deep: #0B1C2A;          /* Deep Surface Navy */
+  --color-navy-basalt: #06121D;        /* Ultra-dark Base */
+  --color-navy-border: #1C3A52;        /* Dark Surface Separator */
+  --color-navy-muted: #244866;         /* Secondary Navy Accent */
+
+  /* Architectural Neutral Surfaces */
+  --color-surface-white: #FFFFFF;
+  --color-surface-daylight: #F8FAFC;   /* Neutral Off-white */
+  --color-surface-border: #E2E8F0;     /* Light Surface Separator */
+  --color-surface-subtle: #F1F5F9;
+
+  /* High-Contrast Inks */
+  --color-ink-primary: #112A3E;        /* Headings on light */
+  --color-ink-body: #1E293B;           /* Body copy on light */
+  --color-ink-muted: #475569;          /* Secondary text (WCAG AA > 5.5:1) */
+  --color-ink-subtle: #64748B;         /* Meta labels */
+  --color-ink-ochre: #A37500;          /* High-contrast Gold label on white */
+}
+
 @layer base {
   :root {
-    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-sans: 'IBM Plex Sans', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   }
 
   html {
@@ -15,7 +45,26 @@
 
   body {
     font-family: var(--font-sans);
-    color: #0f172a; /* Slate 900 */
-    background-color: #f8fafc; /* Slate 50 */
+    color: #112A3E;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  /* Accessibility: Respect Reduced Motion Preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Accessibility: Global visible focus states with #FFB800 */
+  :focus-visible {
+    outline: 2px solid #FFB800;
+    outline-offset: 2px;
   }
 }

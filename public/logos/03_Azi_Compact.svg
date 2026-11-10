@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="353" viewBox="0 0 500 353" role="img" aria-labelledby="title desc">
+  <title id="title">Azi compact logo</title>
+  <desc id="desc">Symbol and company name without descriptor for compact placements.</desc>
+  <g id="azi-symbol" transform="translate(143.000 39.000) scale(1.0594059)">
+  <path id="gold-left-stroke" fill="#FFB800" d="M0 144 L44 144 L108 56 L89 27 Z"/>
+  <path id="apex-stroke" fill="#112A3E" d="M89 27 L107 0 L139 46 L119 74 Z"/>
+  <path id="right-chevron" fill="#112A3E" d="M59 144 L146 56 L202 144 L161 144 L141 107 L105 144 Z"/>
+</g>
+<g fill="#112A3E" transform="translate(165.271 311.000) scale(0.0537109 -0.0537109)" aria-label="Azi">
+<path transform="translate(0)" d="M5 0H396L487 287H1016L1104 0H1506L991 1490H517ZM577 568 604 655C656 821 704 984 755 1167C805 984 853 821 902 655L929 568Z"/>
+<path transform="translate(1511)" d="M97 0H1011V266H512V268L1002 817V1056H97V788H598V786L97 226Z"/>
+<path transform="translate(2619)" d="M96 0H440V1056H96ZM267 1159C378 1159 457 1232 457 1333C457 1434 378 1506 267 1506C157 1506 78 1434 78 1333C78 1232 157 1159 267 1159Z"/>
+</g>
+</svg>

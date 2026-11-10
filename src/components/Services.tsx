@@ -1,120 +1,130 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { SectionWrapper, SectionHeading, Button } from './ui';
 
-interface ServiceEntry {
+interface ServiceItem {
+  id: string;
   number: string;
   title: string;
   description: string;
+  scope: string[];
 }
 
-const SERVICES: ServiceEntry[] = [
+const SERVICES: ServiceItem[] = [
   {
+    id: 'factory-demolition',
     number: '01',
-    title: 'Factory / Building Demolition',
-    description: 'We safely dismantle factory buildings, industrial sheds, and steel structures using heavy machinery and trained cutting crews.'
+    title: 'Factory & Building Demolition',
+    description: 'Controlled dismantling of industrial sheds, warehouses, and commercial steel structures using hydraulic machinery and trained gas-cutting crews.',
+    scope: ['Industrial sheds & mills', 'Steel warehouses', 'Commercial framing'],
   },
   {
+    id: 'heavy-machinery',
     number: '02',
-    title: 'Heavy Machinery Scrap',
-    description: 'We dismantle, lift, and buy heavy machinery on site—including generators, chillers, boilers, transformers, and industrial tanks.'
+    title: 'Heavy Machinery Dismantling',
+    description: 'On-site dismantling, heavy rigging, and buyout of industrial plant equipment, including generators, chillers, boilers, transformers, and storage tanks.',
+    scope: ['Generators & transformers', 'Boilers & chillers', 'Industrial plant tanks'],
   },
   {
+    id: 'metal-scrap',
     number: '03',
-    title: 'Metal Scrap Removal',
-    description: 'We buy iron beams, roofing sheets, copper cables, and scrap metal at fair market rates, weighed on certified public weighbridges.'
+    title: 'Industrial Metal Scrap Removal',
+    description: 'Bulk purchase and clearing of structural steel, copper, iron beams, and production scrap weighed transparently on certified public weighbridges.',
+    scope: ['Structural I-beams & columns', 'Copper & heavy cable', 'Production metal waste'],
   },
   {
+    id: 'site-clearance',
     number: '04',
-    title: 'Site Clearance',
-    description: 'We break concrete foundations, haul all rubble away in tipper trucks, and level the ground clean ready for new construction.'
-  }
+    title: 'Site Clearance & Leveling',
+    description: 'Complete foundation breaking, tipper truck hauling of all concrete rubble, and surface grading to deliver a clean, build-ready plot.',
+    scope: ['Foundation breaking', 'Rubble haulage in tippers', 'Plot grading & handover'],
+  },
 ];
 
 export const Services: React.FC = () => {
   return (
-    <section 
-      id="services" 
-      aria-labelledby="services-heading"
-      className="py-20 sm:py-28 lg:py-32 bg-slate-50/70 border-b border-slate-200"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Editorial Split: Left Column (Heading + 1 Service Image) | Right Column (Clean Vertical List) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
-          {/* Left: Section Header & 1 Strong Service Image */}
-          <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-            <span className="text-xs font-bold text-amber-600 tracking-widest uppercase font-mono">
-              OUR SERVICES
-            </span>
-
-            <h2 
-              id="services-heading"
-              className="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-slate-950 leading-[1.15]"
-            >
-              What we handle on site.
-            </h2>
-
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-md font-normal">
-              A single experienced crew for dismantling structures, buying heavy scrap metal, and clearing land ready for new use.
-            </p>
-
-            {/* 1 Strong Service Image */}
-            <div className="pt-2">
-              <div className="relative rounded-md overflow-hidden bg-slate-200 aspect-4/3 sm:aspect-16/11 border border-slate-200">
-                <img
-                  src="/images/services-cutting.jpg"
-                  alt="LTS cutting crew dismantling heavy industrial steel beams on site"
-                  loading="lazy"
-                  decoding="async"
-                  width="1400"
-                  height="1050"
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-              <span className="block text-xs text-slate-500 mt-2 font-mono">
-                Trained cutting crews dismantling structural steel on site
-              </span>
-            </div>
-          </div>
-
-          {/* Right: Clean Vertical Service List */}
-          <div className="lg:col-span-7 divide-y divide-slate-200 border-y border-slate-200">
-            {SERVICES.map((service) => (
-              <article 
-                key={service.number}
-                className="py-8 sm:py-9 first:pt-3 last:pb-6 group transition-colors"
-              >
-                <span className="text-xs font-bold font-mono text-amber-600 block mb-2 tracking-wider">
-                  {service.number}
-                </span>
-
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight mb-2.5">
-                  {service.title}
-                </h3>
-
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
-                  {service.description}
-                </p>
-              </article>
-            ))}
-
-            {/* Quiet Footer Link */}
-            <div className="pt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs sm:text-sm text-slate-600">
-              <span>Have a specific facility or equipment to dismantle?</span>
-              <a
-                href="#contact"
-                className="font-semibold text-amber-600 hover:text-amber-700 inline-flex items-center gap-1.5 uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm"
-              >
-                <span>Request Site Inspection</span>
-                <ArrowRight className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-
+    <SectionWrapper id="services" background="white" aria-labelledby="services-heading">
+      {/* Section Header */}
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 sm:mb-16">
+        <SectionHeading
+          id="services-heading"
+          eyebrow="Core Capabilities"
+          title="What we dismantle and clear."
+          description="Four focused capabilities under a single contract. Direct contractor execution, transparent weighbridge scrap pricing, and clean handover."
+          className="mb-0 max-w-2xl"
+        />
+        <div className="hidden md:block shrink-0">
+          <Button
+            href="#contact"
+            variant="outline"
+            size="sm"
+            icon={<ArrowRight className="w-4 h-4 text-[#A37500]" strokeWidth={2.5} aria-hidden="true" />}
+          >
+            Request a Quote
+          </Button>
         </div>
-
       </div>
-    </section>
+
+      {/* 2x2 Architectural Grid with Hairline Dividers (No Generic Rounded Cards) */}
+      <div className="border-t border-b border-slate-200 divide-y divide-slate-200 md:grid md:grid-cols-2 md:divide-y-0 md:divide-x">
+        {SERVICES.map((service, index) => (
+          <article
+            key={service.id}
+            className={`py-8 sm:py-10 ${
+              index % 2 === 0 ? 'md:pr-10 lg:pr-12' : 'md:pl-10 lg:pl-12'
+            } ${index >= 2 ? 'md:border-t md:border-slate-200' : ''} flex flex-col justify-between group hover:bg-slate-50/50 transition-colors`}
+          >
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs font-bold text-[#A37500] bg-amber-50 border border-amber-200/80 rounded-xs px-2 py-0.5 tracking-wider uppercase">
+                  Service {service.number}
+                </span>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-[#112A3E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#FFB800] rounded-xs"
+                  aria-label={`Get quote for ${service.title}`}
+                >
+                  <span>Inquire</span>
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                </a>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-bold text-[#112A3E] tracking-tight">
+                {service.title}
+              </h3>
+
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                {service.description}
+              </p>
+            </div>
+
+            {/* Glanceable Scope Tags */}
+            <div className="pt-6 mt-6 border-t border-slate-100 flex flex-wrap gap-2">
+              {service.scope.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs text-slate-600 bg-white border border-slate-200 rounded-xs px-2.5 py-1 font-medium select-none"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {/* Mobile Action */}
+      <div className="mt-8 md:hidden">
+        <Button
+          href="#contact"
+          variant="outline"
+          size="md"
+          fullWidth
+          icon={<ArrowRight className="w-4 h-4 text-[#A37500]" strokeWidth={2.5} aria-hidden="true" />}
+        >
+          Request a Quote for Your Site
+        </Button>
+      </div>
+    </SectionWrapper>
   );
 };
